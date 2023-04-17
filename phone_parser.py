@@ -3,6 +3,7 @@ from datetime import datetime
 from itertools import islice
 import re
 import json
+import pyttsx3
 
 input_line = "-" * 50 + "\n"\
     "Input command \n"\
@@ -270,13 +271,14 @@ def main():
     while True:
         parse_data(read_book())
         command = input(input_line).lower()
-        command = "add test 123456789876 10-02-1990"
+        # command = "add test 123456789876 10-02-1990"
         func = get_func(command)
+        engine = pyttsx3.init()
+        engine.say(func)
+
+        engine.runAndWait()
         print(func)
         save_book()
-        command = "find 98"  # test func
-        func = get_func(command)
-        print(func)
         if command.split()[0] in ["good", "bye", "close", "exit"]:
             break
 
