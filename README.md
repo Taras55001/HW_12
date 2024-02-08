@@ -51,7 +51,7 @@ John: +123456789876, birthday 10-02-1990
 
 Feel free to modify and integrate this script into your projects.
 
-Replace `123456789` and other placeholder values with actual data if needed.
+Replace `123456789` and other placeholder values with actual data.
 This `README.md` file provides a basic overview of the script and instructions for using it.
 
 
